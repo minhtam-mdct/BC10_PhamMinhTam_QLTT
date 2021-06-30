@@ -1,0 +1,60 @@
+.about {
+  .title {
+    padding-top: $pd-9;
+    p {
+      @include styleText(1.1rem, 600, $color-pink-1);
+      margin-bottom: 0.5em;
+    }
+    span {
+      @include styleText($fs-9, 700, $color-dark-5);
+    }
+  }
+  .bd-img {
+    width: 100%;
+    position: absolute;
+    top: 450px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .about .bd-img {
+    top: 500px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .about .title span {
+    font-size: 2.5rem;
+  }
+  .about .bd-img {
+    top: 400px;
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about {
+    .title {
+        padding-top: 75px;
+    }
+    .title span {
+      font-size: 2rem;
+    }
+    .bd-img {
+        top: 350px;
+        z-index: -1;
+      }
+  }
+}
+@media screen and (max-width: 576px) {
+    .about {
+      .title {
+          padding-top: 40px;
+      }
+      .title span {
+        font-size: 1.5rem;
+        line-height: 1px;
+      }
+      .bd-img {
+          top: 290px;
+          z-index: -1;
+        }
+    }
+  }

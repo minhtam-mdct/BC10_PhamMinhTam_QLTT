@@ -1,0 +1,23 @@
+@import "./helpers/mixin";
+@import "./helpers/variables";
+@import "./base/reset";
+
+*{
+    box-sizing: border-box;
+    max-width: 100%;
+}
+a:hover{
+    text-decoration: none;
+    transition: all 200ms ease;
+}
+.container{
+    // max-width: 1200px;
+    padding: 0;
+}
+@import "./layout/header";
+@import "./layout/about";
+@import "./layout/agent";
+@import "./layout/contactForm";
+@import "./components/button";
+@import "./layout/footer";
+@import "./layout/responsive";

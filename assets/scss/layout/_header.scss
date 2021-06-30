@@ -1,0 +1,109 @@
+header {
+  width: 100%;
+  z-index: 999;
+  // transition: transform 200ms ease;
+  // transform: translateY(0);
+  .bd-header {
+    width: 100%;
+    position: absolute;
+  }
+  .navbar {
+    position: relative;
+    z-index: 1;
+    padding: 0px;
+    // max-width: 1280px;
+    margin: auto;
+    .navbar-brand {
+      padding: 0px;
+      img {
+        width: 80px;
+      }
+    }
+  }
+  .nav-link {
+    margin-right: 3rem;
+    @include styleText($fs-1, 600, $color-dark-5);
+    transition: 0.2s;
+    &.active {
+      @include styleText($fs-1, 600, $color-pink-1);
+    }
+    &:hover {
+      @include styleText($fs-1, 600, $color-pink-1);
+    }
+  }
+  .boxCall {
+    display: inline-block;
+  }
+  .numberPhone {
+    @include styleText($fs-1, 500, $color-white-3);
+    .callBtn {
+      @include styleButton($color-pink-1, $pd-0, 1rem, none, 30px, 0px);
+      width: 180px;
+      height: 45px;
+      text-align: center;
+      //   box-shadow: 0 0 0 1px #b61984 inset;
+      &:hover {
+        @include styleButton($color-white-3, $pd-0, 1rem, none, 30px, 0px);
+        box-shadow: 0 0 0 1px #b61984 inset;
+      }
+    }
+    &:hover {
+      @include styleText($fs-1, 500, $color-pink-1);
+    }
+  }
+  .socialBtn a {
+    @include styleText($fs-0, 500, $color-dark-5);
+    margin-right: 0.3rem;
+    &:hover {
+      @include styleText($fs-0, 500, $color-pink-1);
+    }
+  }
+}
+
+.sticky {
+  width: 100%;
+  
+  .navbar{
+    
+    
+    z-index: 9999;
+  .collapse{
+    background: #fff;
+    top: 0;
+  padding: 5px 100px;
+  position: fixed;
+  
+  }
+  .navbar-brand{
+    display: none;
+  }
+  ul li{
+    z-index: 999;
+  }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    .boxCall {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  header{
+    .navbar-collapse{
+      position: absolute;
+      top: 6em;
+      background: #e8e1e1;
+      text-align: center;
+    }
+    .navbar-toggler-icon{
+      font-size: 2rem;
+      color: hotpink;
+      z-index: 1;
+      margin-top: 1.5rem;
+    }
+  }
+}
+

@@ -1,0 +1,53 @@
+.agent{
+    position: relative;
+    background: $color-purple-1;
+    margin-top: 15px;
+    .item{
+        border-radius: 12px;
+        position: relative;
+        margin: 10px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        z-index: 5;
+        
+        .avt_agent{
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+                display: block;
+                transform: scale3d(1, 1, 1);
+            }
+            &:hover {
+                img{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+                }
+            }
+        }
+        .info{
+            background: $color-white-3;
+            text-align: center;
+            z-index: 6;
+            span{
+                @include styleText($fs-0, 700, $color-pink-1);
+
+            }
+            h1{
+                @include styleText(25px, 700, $color-dark-5);
+            }
+            p{
+                @include styleText($fs-10, 400, $color-dark-5);
+            }
+        }
+        transition: all 300ms ease-in-out;
+        &:hover{
+            box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+            transition: all 300ms ease-in-out;
+        }
+    }
+    .agentBg{
+        position: absolute;
+        bottom: 0px;
+    }
+}
